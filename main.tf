@@ -18,6 +18,7 @@ provider "aws" {
 resource "helm_release" "traefik-ingress" {
   name       = "ms-traefik-ingress"
   chart      = "traefik"
+  version    = "3.8.2"
   repository = "https://traefik.github.io/charts"
   values = [<<EOF
   service:
